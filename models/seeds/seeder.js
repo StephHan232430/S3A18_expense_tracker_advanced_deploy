@@ -17,10 +17,10 @@ db.once('open', () => {
 
   userSeeds.forEach(user => {
     bcrypt.genSalt(10, (err, salt) => {
-      bcrypt.hash(userSeeds.password, salt, (err, hash) => {
+      bcrypt.hash(user.password, salt, (err, hash) => {
         const newUser = new User({
-          name: userSeeds.name,
-          email: userSeeds.email,
+          name: user.name,
+          email: user.email,
           password: hash
         })
 
