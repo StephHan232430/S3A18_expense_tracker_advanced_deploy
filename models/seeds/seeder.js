@@ -37,3 +37,7 @@ db.once('open', () => {
   }
   console.log('seeded!')
 })
+
+  // || 'mongodb://localhost/expense-tracker-advanced'
+
+// 'mongodb://heroku_mx3xc41d:6ebk34pf5hjumbg5lqvcq1c2p3@ds013212.mlab.com:13212/heroku_mx3xc41d'
