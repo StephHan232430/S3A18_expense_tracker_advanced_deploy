@@ -31,11 +31,11 @@ db.once('open', () => {
               userId: user._id
             })
           }
+          console.log('seeded!')
         }).catch(err => console.log(err))
       })
     })
   }
-  console.log('seeded!')
 })
 
   // || 'mongodb://localhost/expense-tracker-advanced'
