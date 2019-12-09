@@ -15,7 +15,7 @@ db.on('error', () => {
 db.once('open', () => {
   console.log('mongodb connected!')
 
-  userSeeds.forEach(user => {
+  userSeeds.forEach((user, uNum) => {
     bcrypt.genSalt(10, (err, salt) => {
       bcrypt.hash(user.password, salt, (err, hash) => {
         const newUser = new User({
